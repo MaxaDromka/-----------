@@ -43,7 +43,7 @@ class IterableObject extends Object {
  }
 }
   
-  const newObj = new IterableObject({ news });
+  const newObj = new IterableObject( news[0] );
   
   for (let [key, value] of newObj) {
   console.log(key, value);
