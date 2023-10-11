@@ -1,0 +1,22 @@
+<!DOCTYPE html>      
+<html lang="en">      
+<head>      
+    <meta charset="UTF-8">      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <script src = "script.js" type="text/javascript"></script>
+    <title>News Details</title>            
+</head>      
+<body>      
+    <div class="detail">
+        <p id="news-text"></p>
+    </div>
+    <script>
+        const newsId = window.location.hash.substring(1);
+        const selectedNews = news.find((item) => item.id === parseInt(newsId));
+        if (selectedNews) {
+            const newsText = selectedNews.text;
+            document.getElementById("news-text").textContent = newsText;
+        }
+    </script> 
+</body>      
+</html>
